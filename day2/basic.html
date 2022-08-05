@@ -1,0 +1,57 @@
+----Day2----
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Javascript</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // global variable
+      var a = 10;
+      var b = 12;
+      var c = a + b;
+      console.log("Sum is ", c); //two statement
+      console.log("Sum is " + c); //concatenate
+      console.log(typeof a); //data type	- number
+      console.log(typeof "a"); //data type	- string
+      console.log(typeof 34.5); //data type	- number
+
+      a = 2;
+      b = "hi";
+      c = a + b; //concatenate
+      console.log(c);
+
+      a = "23"; //string : int
+      b = "45.6";
+      c = parseInt(a) + parseFloat(b); //typecasting
+      d = Number(a) + Number(b); //typecasting
+      console.log(c);
+      console.log("Number " + d);
+      // Math
+      res = Math.random();
+      console.log("Random ", res); //0.2 to 1
+
+      r = Math.min(0.5, 2, 3, 4, 5, 6, 7, 8);
+      console.log("Min ", r);
+
+      r = Math.max(0.5, 2, 33, 4, 5, 6, 7, 8);
+      console.log("Max ", r);
+      //number round
+      r = Math.ceil(4.2);
+      console.log("Ceil ", r);
+
+      r = Math.floor(4.9);
+      console.log("Floor ", r);
+
+      r = Math.round(1.5);
+      console.log("Round ", r);
+
+      //Two digit random Number
+      res = Math.random() * 100;
+      console.log(Math.floor(res));
+    </script>
+  </body>
+</html>

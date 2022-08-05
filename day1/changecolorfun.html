@@ -1,0 +1,25 @@
+<h1ml>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>javascript</title>
+	</head>
+	<body>
+		<h2 onclick="changeColor1(this);">Welcome to Javascript1</h2>
+
+		<h2 onclick="changeText(this);">Welcome to Javascript2</h2>
+
+		<script type="text/javascript">
+	
+			function changeColor1(a){
+				console.log(a);
+				a.style.color="green";
+			}
+
+			function changeText(b){
+				console.log(b);
+				b.innerHTML="Data changed!";
+			}
+		</script>
+	</body>
+</html>

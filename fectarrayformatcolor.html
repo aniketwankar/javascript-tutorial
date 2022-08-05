@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Javascript Basics</title>
+  </head>
+  <body>
+    <p>This is paragraph 1</p>
+    <p id="para1">This is paragraph 2</p>
+    <h1>Heading</h1>
+    <p>This is paragraph 3</p>
+    <p>This is paragraph 4</p>
+
+    <script type="text/javascript">
+      // fetch in array format
+      data = document.getElementsByTagName("p");
+      console.log(data);
+      console.log("Length of array", data.length);
+
+      for (var i = 0; i < data.length - 2; i++) {
+        data[i].style.color = "green";
+      }
+
+      // fetch in array format
+      data = document.getElementsByTagName("h1");
+      console.log(data);
+
+      //fetch single element
+      data = document.getElementById("para1");
+      console.log(data);
+    </script>
+  </body>
+</html>

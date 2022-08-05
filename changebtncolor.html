@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Javascript Basics</title>
+  </head>
+  <body>
+    <button onclick="fun('red')">Red</button>
+    <button onclick="fun('green')">Green</button>
+    <button onclick="fun('blue')">Blue</button>
+
+    <p id="para1">This is Paragraph!</p>
+
+    <script type="text/javascript">
+      a = document.getElementById("para1");
+      console.log(a);
+
+      function fun(x) {
+        console.log(x);
+        a.style.color = x; //red
+      }
+    </script>
+  </body>
+</html>

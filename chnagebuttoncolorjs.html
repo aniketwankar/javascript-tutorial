@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Javascript Basics</title>
+  </head>
+  <body>
+    <button onclick="fun1()">Red</button>
+    <button onclick="fun2()">Green</button>
+    <button onclick="fun3()">Blue</button>
+
+    <p id="para1">This is Paragraph!</p>
+
+    <script type="text/javascript">
+      a = document.getElementById("para1");
+      console.log(a);
+      function fun1() {
+        //lowecamel case
+        //document.getElementById('para1').style.color="red";
+        a.style.color = "red";
+      }
+      function fun2() {
+        a.style.color = "green";
+      }
+      function fun3() {
+        a.style.color = "blue";
+      }
+    </script>
+  </body>
+</html>
