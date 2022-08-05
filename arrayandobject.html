@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>javascript Array and Object</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      //variable
+      emp1 = 20000; // 2byte
+      emp2 = 10000;
+      emp3 = 40000;
+      emp4 = 20000;
+      emp5 = 50000;
+      //10byte
+      //array : array is a collection element which are logically interrelated
+      //2byte total 10byte
+      emp = [20000, 20000, 20000, 20000, 4000];
+
+      employeeLabel = ["Name", "Age", "Salary", "City"];
+      employeeDetail = ["Rahul", 38, 20000, "nagpur", "male"];
+      // console.log(employeeDetail);
+      for (var i = 0; i < employeeLabel.length; i++) {
+        if (i == 2) {
+          console.log(employeeLabel[i] + " : " + employeeDetail[i]);
+        }
+      }
+
+      // multi dimensional
+      employeeDetail = [
+        ["Rahul", 38, 20000, "nagpur", "male"],
+        ["Rohit", 38, 20000, "nagpur", "male"],
+        ["Rohit", 38, 20000, "nagpur", "male"],
+        ["Rohit", 38, 20000, "nagpur", "male"],
+        ["Rohit", 38, 20000, "nagpur", "male"],
+        ["Rohit", 38, 20000, "nagpur", "male"],
+      ];
+      console.log(employeeDetail);
+
+      //Array
+      arr = [12, 23, 34, 45, 67, 78, 89];
+      // print sum of all element in array
+      // print minimum number
+      // print maximum number
+    </script>
+  </body>
+</html>

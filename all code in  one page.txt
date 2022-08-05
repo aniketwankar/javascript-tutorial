@@ -1,0 +1,2832 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<p>Welcome to html</p>
+		<p>2+2</p>
+		Javascript
+		<ul>
+			<li>ALU Operations at client side</li>
+			<li>validation</li>
+			<li>Canvas-2d 3d design Game development</li>
+			<li>Animation: slider, popup, </li>
+			<li>Ajax: load page without refresh Reactjs</li>
+			<li>Backend with node</li>
+		</ul>
+		<ol>
+			<li>Vue.js</li>
+			<li>Angular.js</li>
+			<li>React.js</li>
+		</ol>
+	</body>
+</html>
+
+
+Events: 
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>javascript</title>
+	</head>
+	<body>
+		<h2 onclick="changeColor1(this);">Welcome to Javascript1</h2>
+
+		<h2 onclick="changeText(this);">Welcome to Javascript2</h2>
+
+		<script type="text/javascript">
+	
+			function changeColor1(a){
+				console.log(a);
+				a.style.color="green";
+			}
+
+			function changeText(b){
+				console.log(b);
+				b.innerHTML="Data changed!";
+			}
+		</script>
+	</body>
+</html>
+
+----Day2----
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			// global variable
+			var a = 10;
+			var b = 12;
+			var c = a+b;
+			console.log("Sum is ", c); //two statement
+			console.log("Sum is "+c); //concatenate
+			console.log(typeof a); //data type	- number
+			console.log(typeof "a"); //data type	- string
+			console.log(typeof 34.5); //data type	- number
+
+			a = 2;
+			b = "hi";
+			c = a+b; //concatenate
+			console.log(c);
+
+			a = "23"; //string : int
+			b = "45.6";
+			c = parseInt(a)+parseFloat(b);  //typecasting
+			d = Number(a)+Number(b);  //typecasting
+			console.log(c);
+			console.log("Number "+ d);
+			// Math 
+			res = Math.random();
+			console.log("Random ", res);  //0.2 to 1
+
+			r = Math.min(0.5,2,3,4,5,6,7,8);
+			console.log("Min ", r); 
+
+			r = Math.max(0.5,2,33,4,5,6,7,8);
+			console.log("Max ", r);  
+			//number round
+			r = Math.ceil(4.2);
+			console.log("Ceil ", r); 
+
+			r = Math.floor(4.9);
+			console.log("Floor ", r);
+
+			r = Math.round(1.5);
+			console.log("Round ", r); 
+
+			//Two digit random Number
+			 res = Math.random()*100;
+			 console.log(Math.floor(res));
+
+		</script>
+	</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript Basics</title>
+</head>
+<body>
+
+	<button onclick="fun1()">Red</button>
+	<button onclick="fun2()">Green</button>
+	<button onclick="fun3()">Blue</button>
+
+	<p id="para1">This is Paragraph!</p>
+	
+
+<script type="text/javascript">
+	a = document.getElementById('para1');
+	console.log(a);
+	function fun1(){
+		//lowecamel case
+		//document.getElementById('para1').style.color="red";
+		a.style.color="red";
+	}
+	function fun2(){
+		a.style.color="green";
+	}
+	function fun3(){
+		a.style.color="blue";
+	}
+
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript Basics</title>
+</head>
+<body>
+
+	<button onclick="fun('red')">Red</button>
+	<button onclick="fun('green')">Green</button>
+	<button onclick="fun('blue')">Blue</button>
+
+	<p id="para1">This is Paragraph!</p>
+	
+<script type="text/javascript">
+	a = document.getElementById('para1');
+	console.log(a);
+	
+	function fun(x){
+		console.log(x)
+		a.style.color=x; //red
+	}
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript Basics</title>
+</head>
+<body>
+
+	<p>This is paragraph 1</p>
+	<p id="para1">This is paragraph 2</p>
+	<h1>Heading </h1>
+	<p>This is paragraph 3</p>
+	<p>This is paragraph 4</p>
+	
+<script type="text/javascript">
+	// fetch in array format
+	data = document.getElementsByTagName('p');
+	console.log(data);
+	console.log("Length of array", data.length);
+	
+	for (var i =0; i<data.length-2; i++) {
+	
+		data[i].style.color="green";
+	}
+	
+	// fetch in array format
+	data = document.getElementsByTagName('h1');
+	console.log(data);
+
+	//fetch single element
+	data = document.getElementById('para1');
+	console.log(data);
+	
+	
+</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript Selector</title>
+</head>
+<body>
+
+	<p>This is paragraph 1</p>
+	<p id="para1">This is paragraph 2</p>
+	<h1 class="bg-grey">Heading </h1>
+	<p>This is paragraph 3</p>
+	<p class="bg-grey">This is paragraph 4</p>
+	
+<script type="text/javascript">
+	// fetch in array format
+	data = document.getElementsByTagName('p');
+	console.log(data);
+	console.log("Length of array", data.length);
+
+	// fetch in array format
+	data = document.getElementsByTagName('h1');
+	console.log(data);
+
+	//fetch single element
+	data = document.getElementById('para1');
+	console.log(data);
+
+	//fetch single element
+	data = document.getElementsByClassName('bg-grey');
+	console.log(data);
+	
+	//single element
+	data = document.querySelector('p');
+	console.log("QuerySelector", data);	
+
+	data = document.querySelector('.bg-grey'); //. class, # id
+	console.log("QuerySelectorClass", data);
+
+	data = document.querySelector('p.bg-grey'); //select para with class bg-grey
+	console.log("QuerySelectorClass", data);
+
+	data = document.querySelectorAll('p');
+	console.log("Query selector All", data);
+
+	data = document.querySelectorAll('.bg-grey');
+	console.log("Query selector Class", data);	
+	
+	
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>javascript Array and Object</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//variable
+			emp1=20000;  // 2byte
+			emp2=10000;
+			emp3=40000;
+			emp4=20000;
+			emp5=50000;
+			//10byte
+			//array : array is a collection element which are logically interrelated
+			//2byte total 10byte
+			emp = [20000, 20000,20000, 20000, 4000];
+
+			employeeLabel = ["Name", "Age", "Salary", "City"];
+			employeeDetail = ["Rahul", 38, 20000, "nagpur", "male"];
+			// console.log(employeeDetail); 
+			for (var i = 0; i<employeeLabel.length; i++) {
+				if(i==2){
+				console.log(employeeLabel[i]+" : "+employeeDetail[i]);
+				}
+			}
+			
+			// multi dimensional
+			employeeDetail = [
+								["Rahul", 38, 20000, "nagpur", "male"],
+								["Rohit", 38, 20000, "nagpur", "male"],
+								["Rohit", 38, 20000, "nagpur", "male"],
+								["Rohit", 38, 20000, "nagpur", "male"],
+								["Rohit", 38, 20000, "nagpur", "male"],
+								["Rohit", 38, 20000, "nagpur", "male"],
+							];
+							console.log(employeeDetail);
+
+			//Array
+			arr = [12,23,34,45,67,78,89];
+			// print sum of all element in array
+			// print minimum number
+			// print maximum number
+
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>javascript Array and Object</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//Array
+			arr = [12,2,34,45,67,78,89];
+			// print sum of all element in array
+			// print minimum number
+			// print maximum number
+			total = 0;
+			for (var i = 0; i<arr.length; i++) {
+				total=total+arr[i];  //35
+			}
+			console.log("Total sum is", total);
+			
+			mn = Math.min.apply(Math, arr);
+			console.log("Minimum number is ", mn);
+
+			mn = Math.max.apply(Math, arr);
+			console.log("Maximum number is ", mn);
+
+			arr = [12,34,45,67,89];
+			temp = arr[0]; //12
+
+			for (var i = 0; i<arr.length; i++) {
+				if(temp>arr[i]){
+					temp=arr[i]; //2
+				}
+			}
+			console.log("Minimum", temp);
+
+
+			arr = [120,34,45,67,89];
+			temp = arr[0]; //12
+
+			for (var i = 0; i<arr.length; i++) {
+				if(temp<arr[i]){
+					temp=arr[i]; //2
+				}
+			}
+			console.log("Maximum", temp);
+
+			
+
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>javascript Array and Object</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			//object javascript : php associative array: python dict
+			owner = ['rahul', 'rohit', 'alok'];
+			car = ['bmw', 'audi', 'skoda'];
+
+			for (var i = 0; i<3; i++) {
+				console.log(owner[i], " has ", car[i]);
+			}
+			console.log(owner);
+			// object
+			owner = {	'rahul':'bmw', //owner.rahul or owner['rahul']
+						'rohit':'audi', 
+						'alok':'skoda'
+					};
+
+			console.log(owner);
+			//accessing using dot
+			console.log("Rahul : ", owner.rahul.car)	;
+			//access using bracket like array
+			console.log(owner['rahul']['address']);
+
+			for(property in owner){
+				console.log(property, "=>", owner[property]);
+			}
+
+		</script>
+	</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>javascript Array and Object</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//object -> object a
+			student = {
+				'rahul':{
+					'age':23,
+					'address':'nagpur',
+					'mobile': 7387990061
+				},
+				'rohit':{
+					'age':24,
+					'address':'wardha',
+					'mobile': 7387990061
+				}
+			};
+			for(key in student){
+				console.log("Name: ",key);
+				for(key2 in student[key]){
+					console.log(key2, " : ", student[key][key2]);
+				}
+			}
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>javascript Array and Object</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//object -> object a
+			student = {
+				'rahul':{
+					'age':23,
+					'address':'nagpur',
+					'mobile': 7387990061
+				},
+				'rohit':{
+					'age':24,
+					'address':'wardha',
+					'mobile': 7387990061
+				},
+				'fun':function(){
+					console.log("Function");
+				}
+			};
+			for(key in student){
+				console.log("Name: ",key);
+				for(key2 in student[key]){
+					console.log(key2, " : ", student[key][key2]);
+				}
+			}
+			student.fun();
+		</script>
+	</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>javascript Array and Object</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+		//javascript origin object
+		//array creating [] array
+		arr1 = ['1', '2'];
+		console.log(arr1);
+
+		arr2 = new Array(1,2);  //function : new function object
+		console.log(arr2);
+
+		// empty array
+		arr3 = new Array();
+		console.log(arr3);
+		arr4=[];
+
+		//object creating - empty
+		obj = {};
+		console.log(obj);
+
+		obj2 = new Object();
+		console.log(obj2);
+
+		obj = {'harish':'nagpur'};
+		console.log(obj);
+
+		obj2 = new Object({'harish':'nagpur'});
+		console.log(obj2);
+
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>javascript Array and Object</title>
+	</head>
+	<body>
+
+		<p>This is paragraph</p>
+		<p>This is paragraph</p>
+		<p>This is paragraph</p>
+
+		<script type="text/javascript">
+
+			// para1 = document.getElementsByTagName('p');
+			// para2 = document.getElementsByClassName('p');
+			// para3 = document.getElementById('#p1');
+			para = document.querySelectorAll('#p1');
+			console.log(para);
+			
+			cl = ['red', 'green', 'blue'];
+
+			
+			for (var i = 0; i<3; i++) {
+					para[i].style.color=cl[i];
+				}
+			
+		</script>
+	</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>javascript Array and Object</title>
+	</head>
+	<body>
+		<p>
+			<button onclick="fun1()">ZoomIN</button>
+			<button onclick="fun2()">ZoomOut</button>
+		</p>
+			
+		<img src="1.jpg" height="200">
+		<script type="text/javascript">
+			data = document.querySelectorAll('img');
+			
+			function fun1(){
+				data[0].style.height="300px";
+			}
+
+
+			function fun2(){
+				data[0].style.height="200px";
+			}
+
+			
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>javascript Array and Object</title>
+	</head>
+	<body>
+		<p>
+			<button onclick="fun1()">ZoomIN</button>
+			<button onclick="fun2()">ZoomOut</button>
+		</p>
+			
+		<img src="1.jpg" height="200" id="img1">
+		<img src="1.jpg" height="200">
+		<img src="1.jpg" height="200">
+		<img src="1.jpg" height="200">
+		<img src="1.jpg" height="200">
+		<script type="text/javascript">
+			data = document.getElementById('img1');
+			console.log(data);
+			function fun1(){
+				data.style.height="300px";
+			}
+
+
+			function fun2(){
+				data.style.height="200px";
+			}
+
+			
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>javascript Array and Object</title>
+	</head>
+	<body>
+	
+		<img src="1.jpg" height="200" id="img1" onmouseover="fun1('img1')" onmouseout="fun2('img1')">
+		<img src="1.jpg" height="200" id="img2" onmouseover="fun1('img2')" onmouseout="fun2('img2')">
+		<img src="1.jpg" height="200" id="img3" onmouseover="fun1('img3')" onmouseout="fun2('img3')">
+		<img src="1.jpg" height="200" id="img4" onmouseover="fun1('img4')" onmouseout="fun2('img4')">
+		<img src="1.jpg" height="200" id="img5" onmouseover="fun1('img5')" onmouseout="fun2('img5')">
+
+		<script type="text/javascript">
+			
+			
+			function fun1(arg){
+				data = document.getElementById(arg);
+				console.log(data);
+				data.style.height="300px";
+			}
+
+
+			function fun2(arg){
+				data = document.getElementById(arg);
+				console.log(data);
+				data.style.height="200px";
+			}
+
+			
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Image Zoom in Zoom out</title>
+	</head>
+	<body>
+	
+		<img src="1.jpg" height="200"  onmouseover="fun1(this)" onmouseout="fun2(this)">
+		<img src="1.jpg" height="200"  onmouseover="fun1(this)" onmouseout="fun2(this)">
+		<img src="1.jpg" height="200"  onmouseover="fun1(this)" onmouseout="fun2(this)">
+		<img src="1.jpg" height="200"  onmouseover="fun1(this)" onmouseout="fun2(this)">
+		<img src="1.jpg" height="200"  onmouseover="fun1(this)" onmouseout="fun2(this)">
+
+		<script type="text/javascript">
+			
+			
+			function fun1(arg){
+				arg.style.height="300px";
+			}
+
+			function fun2(arg){
+				arg.style.height="200px";
+			}
+
+
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Image Opacity</title>
+		<style type="text/css">
+			img{
+				opacity: 0.5;
+			}
+		</style>
+	</head>
+	<body>
+	
+		<img src="1.jpg" height="200"  onmouseover="fun1(this)" onmouseout="fun2(this)">
+		<img src="1.jpg" height="200"  onmouseover="fun1(this)" onmouseout="fun2(this)">
+		<img src="1.jpg" height="200"  onmouseover="fun1(this)" onmouseout="fun2(this)">
+		<img src="1.jpg" height="200"  onmouseover="fun1(this)" onmouseout="fun2(this)">
+		<img src="1.jpg" height="200"  onmouseover="fun1(this)" onmouseout="fun2(this)">
+
+		<script type="text/javascript">		
+			function fun1(arg){
+				arg.style.opacity="1";
+			}
+
+			function fun2(arg){
+				arg.style.opacity="0.5";
+			}
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>setTimeout</title>
+	</head>
+	<body>
+		<p>Para</p>
+
+		<script type="text/javascript">		
+			function fun1(){
+				alert("Hi welcome to javascript");
+			}
+
+			setTimeout("fun1()", 3000);
+			// 3000 is millisecond 3sec
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>setTimeout</title>
+	</head>
+	<body>
+		<button onclick="clearInterval(x)">Stop</button>
+
+		<script type="text/javascript">		
+			function fun1(){
+				console.log("Hi Harish");
+			}
+
+			// call again and again in every 3 sec
+			x = setInterval("fun1()", 3000);
+
+			// setTimeout Call only onces
+			// 3000 is millisecond 3sec
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>setTimeout</title>
+		<style type="text/css">
+			div{
+				height: 100px;
+				width: 100px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="div1" onclick="clearInterval(a)"></div>
+
+		<script type="text/javascript">		
+			d = document.getElementById('div1');
+			x=0;
+			function fun(){
+				if(x>200){clearInterval(a)} //stop the div
+
+				d.style.marginLeft= x+"px";
+				x++;
+			}
+
+			a = setInterval("fun()", 10);
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>setTimeout</title>
+		<style type="text/css">
+			div{
+				height: 100px;
+				width: 100px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="div1" onclick="clearInterval(a)"></div>
+
+		<script type="text/javascript">		
+			d = document.getElementById('div1');
+			x=0;
+			function fun(){
+				if(x>200){
+					clearInterval(a)
+					b = setInterval("fun2()", 10);
+				} //stop the div
+
+				d.style.marginLeft= x+"px";
+				x++;
+			}
+
+			function fun2(){
+				if(x<0){clearInterval(b)} //stop the div
+
+				d.style.marginLeft= x+"px";
+				x--;
+			}
+
+			a = setInterval("fun()", 10);
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>setTimeout</title>
+		<style type="text/css">
+			/*this is tag selector*/
+			#div1{
+				height: 100px;
+				width: 100px;
+				background: red;
+				margin:  40px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="div1" onclick="clearInterval(a)"></div>
+
+		<script type="text/javascript">	
+			//javascript starts 
+			d = document.getElementById('div1');
+			x=0;
+
+			function fun(){
+				d.style.transform= "rotate("+x+"deg)";  //concatenate
+				x++;
+			}
+
+
+			a = setInterval("fun()", 10);
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>setTimeout</title>
+		<style type="text/css">
+			#div1{
+				height: 500px;
+				width: 100%;
+				background: black;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="div1" onclick="clearInterval(a)"></div>
+
+		<script type="text/javascript">	
+			//javascript starts 
+			d = document.getElementById('div1');
+			//variable
+			r=g=b=0;
+
+			function fun(){
+				if(r>255)r=0;
+				if(g>255)g=0;
+				if(b>255)b=0;
+
+				d.style.background= "rgb("+r+", "+g+", "+b+")";  //concatenate rgb(30,10,20)
+			
+				r=r+1;
+				g=g+5;
+				b=b+2;
+			}
+			a = setInterval("fun()", 100);
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Digital Watch</title>
+	
+	</head>
+	<body>
+
+		<div id="div1" onclick="clearInterval(a)"></div>
+
+		<script type="text/javascript">	
+			//javascript starts 
+			d = document.getElementById('div1');
+	
+			function fun(){
+				res = new Date();
+				// d.innerHTML = res;  //to print full date time
+				hr = res.getHours();
+				mn = res.getMinutes();
+				sec = res.getSeconds();
+
+				d.innerHTML = hr +" : "+ mn +" : "+ sec;
+			}
+
+			a = setInterval("fun()", 1000);
+		</script>
+	</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Digital Watch</title>
+		<style type="text/css">
+			#div1{
+				height: 300px;
+				width: 100%;
+				background: red;
+			}
+			#div1 img{
+				height: 300px;
+				width: 100%;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="div1">
+			<img src="img/1.jpg" class="i1">
+			<img src="img/2.jpg" class="i1">
+			<img src="img/6.jpg" class="i1">
+			<img src="img/6.jpg" class="i1">
+			<img src="img/6.jpg" class="i1">
+			<img src="img/6.jpg" class="i1">
+		</div>
+
+		<script type="text/javascript">	
+			//javascript starts 
+			d = document.getElementsByClassName('i1');
+			
+			i=0;
+			function fun(){
+				// hide all images
+				for(j=0;j<d.length;j++){
+					d[j].style.display="none";
+				}
+
+				if(i==d.length)i=0;
+				// display only specific image
+				d[i].style.display="block";
+				i++;
+			}
+
+			a = setInterval("fun()", 1000);
+		</script>
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+
+		<p>
+			Text box: 
+			<input type="text" onkeyup="fun();" id="i1"> 
+		</p>
+		<p id="output"></p>
+
+
+		<script type="text/javascript">
+			data = document.getElementById('i1');
+			op = document.getElementById('output');
+			function fun(){
+				op.innerHTML = data.value;
+			}
+		</script>
+
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+
+		<p id="output">output</p>
+
+		<script type="text/javascript">
+			op = document.getElementById('output');
+			op.innerHTML= "<b>New</b> data";
+		</script>
+
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+
+		<p>
+			Text box: 
+			<input type="text" onkeyup="fun();" id="i1"> 
+		</p>
+		<p id="output1"></p>
+		<p id="output2"></p>
+
+		<script type="text/javascript">
+			data = document.getElementById('i1');
+			op1 = document.getElementById('output1');
+			op2 = document.getElementById('output2');
+
+			function fun(){
+				len = data.value.length;
+				op1.innerHTML = "You have entered "+ data.value;
+				
+				if(len<=4){op2.style.color="red";}
+				else{op2.style.color="green";}
+
+				op2.innerHTML = "You have entered "+len+" character";
+			}
+		</script>
+
+	</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+		Hi user welcome to javascript
+
+		<script type="text/javascript">
+			// string function
+			//variable
+			data = "abcdef";
+			document.write(data);
+			document.write("<br>First Character: ", data[0]);
+			console.log("Length: ", data.length);
+			console.log("First Character: ", data.charAt(0));
+			//CharAt : Upper CamelCase
+			//charAt : Lower Camel case : javascript
+			console.log("ASCII value: ", data.charCodeAt(0));
+			// A 65 Z 90, a=97 z=122, 0=48 9=57
+			console.log("Character", String.fromCharCode(65));
+			console.log("Slice", data.slice(0, 2));
+			//slice, substr, split, substring
+			data="HARISH";
+			console.log("Lowercase", data.toLowerCase());
+			data="harish";
+			console.log("Uppercase", data.toUpperCase());
+
+			data ="   harish ";
+			console.log("Trim", data.trim());
+		</script>
+
+	</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+
+	<p>
+		Name: <input type="text" id="username" onkeyup="fun();"> 
+	</p>
+	<p id="error"></p>
+
+		<script type="text/javascript">
+			data = document.getElementById('username');
+			er = document.getElementById('error');
+
+			function fun(){
+				name = data.value;
+				
+				for(i=0; i<name.length;i++){
+					
+					asci =name.charCodeAt(i);
+					// lowercase
+					if(asci>=97 && asci<=122){
+						er.innerHTML = "You have enter lowercase";
+					}
+					else if(asci>=65 && asci<=90){
+						er.innerHTML = "You have enter Uppercase";
+					}
+					else if(asci>=48 && asci<=57){
+						er.innerHTML = "You have enter Number";
+					}
+					else{
+						er.innerHTML = "You have enter Special Character";
+					}
+				}
+
+			}
+		
+		</script>
+
+	</body>
+</html>
+
+Homework:
+//slice, substr, split, substring
+//name = "abcd"   console print : d
+//abc = 97+98+99=
+
+====Day 6====
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+
+	<p>
+		Name: <input type="text" id="username" onkeyup="fun();"> 
+	</p>
+	<p id="error"></p>
+
+		<script type="text/javascript">
+			data = document.getElementById('username');
+			er = document.getElementById('error');
+
+			function fun(){
+				name = data.value;
+				len = name.length;
+
+				if(len==0){
+					er.innerHTML="Enter Something!";
+					er.style.color="Green";
+				}
+
+				for (var i=0; i<len; i++) {
+					asci = name.charCodeAt(i);
+					
+					if(asci>=97 && asci<=122){
+						er.innerHTML = "";
+						console.log(asci);		
+					}
+					else{
+						er.innerHTML="You have entered Number";
+						er.style.color="red";
+						break;
+					}
+			}
+
+			}
+		
+		</script>
+
+	</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+		<h2>Validataion</h2>
+	<p>
+		Number: <input type="text" id="username" onkeyup="fun();"> 
+	</p>
+	<p id="error"></p>
+
+		<script type="text/javascript">
+			data = document.getElementById('username');
+			er = document.getElementById('error');
+
+			function fun(){
+				name = data.value;
+				len = name.length;
+
+				if(len==0){
+					er.innerHTML="Enter Something!";
+					er.style.color="Green";
+				}
+
+				for (var i=0; i<len; i++) {
+					asci = name.charCodeAt(i);
+					
+					if(asci>=48 && asci<=57){
+						er.innerHTML = "";
+						console.log(asci);		
+					}
+					else{
+						er.innerHTML="Enter Number only!";
+						er.style.color="red";
+						break;
+					}
+			}
+
+			}
+		
+		// harish	@	gmail	.	com : match, test
+		</script>
+
+	</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+		<h2>Validataion</h2>
+	<p>
+		Number: <input type="text" id="username" onkeyup="fun();"> 
+	</p>
+	<p id="error"></p>
+
+		<script type="text/javascript">
+			name = "harish@.com";
+			res1 = name.indexOf('@');
+			console.log(res1);
+
+			res2 = name.indexOf('.');
+			console.log(res2);
+
+			diff = res2-res1;
+			if(diff>1){
+				console.log(diff);
+				console.log("Valid Email");
+			}
+			else{
+				console.log(diff);
+				console.log("Not Valid email");
+			}
+		
+		
+		</script>
+
+	</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+		<h2>Validataion</h2>
+	<p>
+		Email: <input type="text" id="email" onkeyup="check_email();"> 
+	</p>
+	<p id="error"></p>
+
+		<script type="text/javascript">
+
+			function check_email(){
+				name = document.getElementById('email').value;
+				res1 = name.indexOf('@');
+				res2 = name.indexOf('.');
+				
+				diff = res2-res1;
+				if(diff>1){
+					
+					console.log("Valid Email");
+				}
+				else{
+					
+					console.log("Not Valid email");
+				}
+		}
+		
+		
+		</script>
+
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+		<h2>Calculator</h2>
+	<p>
+		Num1: <input type="text" id="num1"> 
+		Num2: <input type="text" id="num2"> 
+	</p>
+	<p>
+		<button onclick="fun()">Sum</button>
+		<button onclick="fun2()">Sub</button>
+	</p>
+	<p id="op"></p>
+
+		<script type="text/javascript">
+			i1 = document.getElementById('num1');
+			i2 = document.getElementById('num2');
+			op = document.getElementById('op');
+
+			function fun(){
+				a = parseInt(i1.value); //type-casting 
+				b = parseInt(i2.value);
+				op.innerHTML =  "Sum is "+(a+b);
+			}
+			function fun2(){
+				a = parseInt(i1.value); //type-casting 
+				b = parseInt(i2.value);
+				op.innerHTML =  "Sub is "+(a-b);
+			}
+		</script>
+
+	</body>
+</html>
+
+//Homework: 
+Task1: harish : HARISH
+Task2: webgurukul : WeBuRuKuL
+Task3: abc : bcd, good:hppe    -ascii
+Task4: Complete the calculator
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+		<h2>Calculator</h2>
+	<p>
+		Num1: <input type="text" id="num1" onkeyup="fun()"> 
+		Num2: <input type="text" id="num2" onkeyup="fun()"> 
+	</p>
+
+	<p id="op"></p>
+
+		<script type="text/javascript">
+			i1 = document.getElementById('num1');
+			i2 = document.getElementById('num2');
+			op = document.getElementById('op');
+
+			function fun(){
+				a = parseInt(i1.value); //type-casting 
+				console.log(a);
+				b = parseInt(i2.value);
+				
+				if(isNaN(a)){
+					a=0;
+				}
+				if(isNaN(b)){
+					b=0;
+				}
+
+				op.innerHTML =  "Sum is "+(a+b);
+			}
+		</script>
+
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+		<h2>Calculator</h2>
+	<p>
+		<input type="text" id="num1"> 
+	</p>
+	<p>
+		<button onclick="set(1)">1</button>
+		<button onclick="set(2)">2</button>
+		<button onclick="set(3)">3</button>
+		<button onclick="set(4)">4</button>
+		<button onclick="set(5)">5</button>
+		<button onclick="set(6)">6</button>
+		<button onclick="set(7)">7</button>
+		<button onclick="set(8)">8</button>
+		<button onclick="set(9)">9</button>
+		<p>
+			<button onclick="set('+')"> +</button>
+			<button onclick="set('-')"> - </button>
+			<button onclick="set('/')">/</button>
+			<button onclick="set('*')">*</button>
+			<button onclick="calculate()">=</button>
+			<button onclick="cl()">Clear</button>
+		</p>
+	</p>
+	<p id="op"></p>
+
+		<script type="text/javascript">
+			i1 = document.getElementById('num1');
+
+			function set(arg){
+				prev = i1.value;
+
+				i1.value=prev+arg;
+			}
+
+			function calculate(){
+				data = i1.value
+				i1.value = eval(data);
+				console.log(eval(data));
+			}
+
+			function cl(){
+				i1.value="";
+			}
+
+		</script>
+
+	</body>
+</html>
+
+
+======Day 7========
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Print Last Character Form</title>
+	</head>
+	<body>
+	<p><input type="text" id="username" onkeyup="fun()"></p>
+	<p id="op"></p>
+
+		<script type="text/javascript">
+			data = document.getElementById('username');
+			function fun(){
+				len = data.value.length;
+
+				console.log(data.value, len);
+				
+				console.log(data.value[len-1]);
+			}
+		</script>
+
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+	<p><input type="text" id="username" onkeyup="fun()"></p>
+	<p id="op"></p>
+
+		<script type="text/javascript">
+			data = document.getElementById('username');
+			
+			function fun(){
+				sum=0;
+				len = data.value.length;
+				for(i=0;i<len;i++){
+					sum=sum+data.value.charCodeAt(i);
+					console.log(data.value.charCodeAt(i));
+				}
+				console.log("Sum is ",sum);
+			}
+		</script>
+
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+	<p><input type="text" id="username" onkeyup="fun()"></p>
+	<p id="op"></p>
+
+		<script type="text/javascript">
+			data = document.getElementById('username');
+			op = document.getElementById('op');
+			
+			function fun(){
+				op.innerHTML = data.value.toUpperCase();
+			}
+		</script>
+
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+	<p><input type="text" id="username" onkeyup="fun()"></p>
+	<p id="op"></p>
+
+		<script type="text/javascript">
+			data = document.getElementById('username');
+			op = document.getElementById('op');
+			
+			function fun(){
+				len = data.value.length;
+				username = data.value;
+				res="";
+				for(i=0; i<len;i++){
+					if(i%2==0){
+						res=res+username[i].toUpperCase();
+					}
+					else{
+						res=res+username[i];
+					}
+					
+				}
+				op.innerHTML = res;
+			}
+		</script>
+
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			username = "abc";
+			asci = username.charCodeAt(0); //0=>a 1=>b 2=>c
+			console.log(String.fromCharCode(100));
+		</script>
+
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Javascript Form</title>
+	</head>
+	<body>
+		<p>
+			Username: <input type="text" id="username" onkeyup="check_username()">
+			<span id="error"></span>
+		</p>
+
+		<script type="text/javascript">
+			i1 = document.getElementById('username');
+			er = document.getElementById('error');
+
+			function check_username(){
+
+				username = i1.value;
+				check =  /^[A-Za-z][A-Za-z0-9@]{7,29}$/;//regular expression
+				res = check.test(username);
+				if(res){
+					er.innerHTML = "Valid Username";
+				}
+				else{
+					er.innerHTML = "Enter Valid Username!";
+				}
+			}
+		</script>
+
+	</body>
+</html>
+
+<!-- Home work -->
+1. Task : Confirm Password validation
+2. hAriSh: HaRIsH
+
+=====Day 9====
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Add Event Listener</title>
+
+	</head>
+	<body>
+		<p onclick="fun(this.id);" id="p1">This is paragraph1</p>
+		<p onclick="fun(this);">This is paragraph2</p>
+		<p onclick="fun(this);">This is paragraph3</p>
+		<p onclick="fun(this);">This is paragraph4</p>
+		<p onclick="fun(this);">This is paragraph5</p>
+	
+
+
+	<script type="text/javascript">
+		function fun(arg){
+			
+			console.log(arg);
+		}
+	</script>
+
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Add Event Listener</title>
+
+	</head>
+	<body>
+		<img src="img/1.jpg" height="200" onmouseover="zoomin(this)" onmouseout="zoomout(this)">
+		<img src="img/2.jpg" height="200" onmouseover="zoomin(this)" onmouseout="zoomout(this)">
+		<img src="img/3.jpg" height="200" onmouseover="zoomin(this)" onmouseout="zoomout(this)">
+		<img src="img/4.jpg" height="200" onmouseover="zoomin(this)" onmouseout="zoomout(this)">
+		<img src="img/5.jpg" height="200" onmouseover="zoomin(this)" onmouseout="zoomout(this)">
+
+
+	<script type="text/javascript">
+		function zoomin(arg){
+			arg.style.height="300px";
+		}
+		function zoomout(arg){
+			arg.style.height="200px";
+		}
+	</script>
+
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Add Event Listener</title>
+
+	</head>
+	<body>
+		<img src="img/1.jpg" height="200" id="img1">
+
+
+
+	<script type="text/javascript">
+		i = document.getElementById('img1');
+		console.log(i);
+
+		i.addEventListener("click", function(){console.log("harish")});
+
+		
+	</script>
+
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Add Event Listener</title>
+
+	</head>
+	<body>
+		<img src="img/1.jpg" height="200" id="img1">
+
+
+
+	<script type="text/javascript">
+		i = document.getElementById('img1');
+		console.log(i);
+
+		function fun(){
+			console.log("harish");
+		}
+
+		i.addEventListener("click", fun);
+
+
+	</script>
+
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Add Event Listener</title>
+
+	</head>
+	<body>
+		<img src="img/1.jpg" height="200" class="imgz">
+		<img src="img/2.jpg" height="200" class="imgz">
+		<img src="img/3.jpg" height="200" class="imgz">
+		<img src="img/4.jpg" height="200" class="imgz">
+		<img src="img/5.jpg" height="200" class="imgz">
+		<img src="img/6.jpg" height="200" class="imgz">
+
+
+
+	<script type="text/javascript">
+		i = document.getElementsByClassName('imgz');
+		console.log(i);
+		for(j=0;j<i.length;j++){
+			i[j].addEventListener('click', function(){console.log("image")})
+		}
+
+	</script>
+
+	</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+</head>
+<body>
+
+<p>This is paragraph</p>
+
+<script src="jquery.js"></script>
+<script>
+	// tag selector
+	$('p').css('color', 'red');
+</script>
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+</head>
+<body>
+
+<p>This is paragraph</p>
+<p id="para2">This is paragraph</p>
+<p class="bg-orange">This is paragraph</p>
+<p class="bg-orange">This is paragraph</p>
+<p>
+	This is paragraph
+	<span>Span 1</span>
+	<span>Span 2</span>
+	<span>Span 3</span>
+	<span>Span 4</span>
+</p>
+
+<script src="jquery.js"></script>
+<script>
+	// tag selector
+	$('p').css('color', 'red');
+	$('#para2').css('color', 'green');
+	$('.bg-orange').css('background-color', 'orange');
+	$('p span').css('color', 'pink');
+	$('p span:even').css('color', 'blue');
+
+</script>
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+</head>
+<body>
+	<div id="box">
+		<p id="p1">This is Paragraph1</p>
+		<p id="p2">This is Paragraph2</p>
+		<p id="p3">This is Paragraph3</p>
+	</div>
+
+<script src="jquery.js"></script>
+<script>
+
+	x=1;
+	function fun(){
+		$('p').hide();
+		$('#p'+x).slideDown(3000);
+		x++;
+	}
+
+	setInterval(fun, 3000);
+
+</script>
+
+
+</body>
+</html>
+
+=====Day 10=======
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+</head>
+<body>
+
+<p onmouseover="fun1();">This is Paragraph</p>
+
+<script src="jquery.js"></script>
+<script>
+	function fun1() {
+		$('p').fadeOut(3000).fadeIn(3000);
+	}
+	
+	
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+	<style type="text/css">
+		.highlight{
+			color: red;
+			background: pink;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+
+<p onmouseover="fun1();" onmouseout="fun2()">This is Paragraph</p>
+
+<script src="jquery.js"></script>
+<script>
+	function fun1() {
+		// $('p').css('color', 'red').css('text-decoration', 'underline');
+		// $('p').css({'color':'red','text-decoration':'underline'});
+		$('p').addClass('highlight');
+	}
+	function fun2(){
+		$('p').removeClass('highlight');
+
+	}
+	
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+	<style type="text/css">
+		.highlight{
+			color: red;
+			background: pink;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+
+<p>This is Paragraph</p>
+<p>This is Paragraph</p>
+<p>This is Paragraph</p>
+<p>This is Paragraph</p>
+<p>This is Paragraph</p>
+<p>This is Paragraph</p>
+
+<script src="jquery.js"></script>
+<script>
+	// Anonymuous function
+	$('p').mouseover(function(){
+		$(this).css('color', 'red');
+	});	
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+	<style type="text/css">
+		.highlight{
+			color: red;
+			background: pink;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+
+<p id="para1">This is Paragraph</p>
+<p>This is Paragraph</p>
+<p>This is Paragraph</p>
+<p>This is Paragraph</p>
+<p>This is Paragraph</p>
+<p>This is Paragraph</p>
+
+<script src="jquery.js"></script>
+<script>
+	// Anonymuous function
+	$('p:even').css('color', 'red');
+	$('p:odd').css('color', 'green');
+	$('p:eq(2)').css('text-decoration', 'underline');
+	$('p').click(function(){
+		d = $(this).attr('id'); // it will fetch value
+		console.log(d);
+		$(this).attr('id', 'newpara'); //it will assign value to attribute
+
+	});
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+</head>
+<body>
+
+<p id="para1" class="bg-red" style="color: blue">This is Paragraph</p>
+<p>This is Paragraph</p>
+<p>This is Paragraph</p>
+<p>This is Paragraph</p>
+<p>This is Paragraph</p>
+<p>This is Paragraph</p>
+
+<script src="jquery.js"></script>
+<script>
+	$('#para1').attr('style', 'color: red'); //it will assign value to attribute
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+</head>
+<body>
+
+<p id="para1" class="bg-red" style="color: blue">This is Paragraph</p>
+
+<script src="jquery.js"></script>
+<script>
+	$('#para1').click(function(){
+		$(this).removeAttr('style');
+	});
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+</head>
+<body>
+
+<p id="para1">This is <span>Paragraph</span></p>
+
+<script src="jquery.js"></script>
+<script>
+	$('#para1').click(function(){
+		$('#para1 span').css('color', 'red');
+	});
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+</head>
+<body>
+
+<img src="img/1.jpg" height="200">
+
+<script src="jquery.js"></script>
+<script>
+	$('img').mouseover(function(){
+		$(this).css('height', '300px');
+	});
+
+	$('img').mouseout(function(){
+		$(this).css('height', '200px');
+	});
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+</head>
+<body>
+
+<img src="img/1.jpg" height="200">
+
+<script src="jquery.js"></script>
+<script>
+	$('img').mouseover(function(){
+		$(this).animate({
+			'height':'300px',
+			'margin-left':'100px'
+		}, 3000);
+	});
+
+	$('img').mouseout(function(){
+		$(this).animate({
+			'height':'200px',
+			'margin-left':'0px'
+		}, 3000);
+	});
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+</head>
+<body>
+
+<img src="img/1.jpg" height="200">
+
+<script src="jquery.js"></script>
+<script>
+	$('img').mouseover(function(){
+		$(this).animate({'height':'300px','margin-left':'150px','margin-top':'200px'}, 3000).	    animate({'height':'200px','margin-left':'0px','margin-top':'0px',}, 3000);
+	});
+
+	
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+	<style type="text/css">
+		.highlight{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+
+<p>This is para</p>
+
+<script src="jquery.js"></script>
+<script>
+	$('p').click(function(){
+		$(this).toggleClass('highlight');
+	});
+
+	
+</script>
+</body>
+</html>
+
+
+======Day 10===========
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+	<style type="text/css">
+		.highlight{
+			color: white;
+			background: orange;
+			border: 0;
+		}
+	</style>
+</head>
+<body>
+
+<button>Click</button>
+
+<script src="jquery.js"></script>
+<script>
+	$('button').click(function(){
+		$(this).toggleClass('highlight');
+	});
+
+	
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+	<style type="text/css">
+		.highlight{
+			color: white;
+			background: orange;
+			border: 0;
+		}
+	</style>
+</head>
+<body>
+<p>
+	Enter Data: <input type="text" id="username">
+</p>
+<p id="op"></p>
+
+<script src="jquery.js"></script>
+<script>
+	
+	$('#username').keyup(function(){
+		data = $(this).val(); //fetch value
+		$('#op').html(data.toUpperCase());  //assign to op
+		console.log(data); 
+	});
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+	<style type="text/css">
+		.highlight{
+			color: white;
+			background: orange;
+			border: 0;
+		}
+	</style>
+</head>
+<body>
+<p>
+	Enter Data: <input type="text" id="username">
+</p>
+<p id="op"></p>
+
+<script src="jquery.js"></script>
+<script>
+	//hArIsH: HaRiSh
+	$('#username').keyup(function(){
+		data = $(this).val(); //fetch value
+		op="";
+		for(i=0; i<data.length;i++){
+			asci = data.charCodeAt(i);
+			console.log("Asci", asci);
+
+			if(asci>=65 && asci<=90){
+				console.log("OP = ", String.fromCharCode(asci+32));
+				op=op+String.fromCharCode(asci+32);
+			}
+			if(asci>=97 && asci<=122){
+				console.log("OP = ", String.fromCharCode(asci-32));
+				op=op+String.fromCharCode(asci-32);
+			}
+		}
+		$('#op').html(op);
+		//A : 65 Z:90  a=97 z=122
+		//97-65=32
+		
+	});
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+	<style type="text/css">
+		.highlight{
+			color: white;
+			background: orange;
+			border: 0;
+		}
+	</style>
+</head>
+<body>
+<p>
+	Enter Username: <input type="text" id="username">
+</p>
+<p id="op"></p>
+
+<script src="jquery.js"></script>
+<script>
+	$('#username').keyup(function(){
+		data = $(this).val(); //fetch value
+		console.log(data.length); //fetch the length
+
+		if(data.length==0){
+			$('#op').html("Enter username!").css('color', 'black');
+		}
+		else if(data.length<8){
+			$('#op').html("Username should be minimum 8 characters!").css('color', 'red');	
+		}
+		else{
+			status=0;
+			for (var i = 0; i <data.length; i++) {
+				asci  = data.charCodeAt(i);
+				//does asci belongs in the range
+				if((asci>=65 && asci<=90) || (asci>=97 && asci<=122) || (asci>=48 && asci<=57)){
+					console.log(data[i], "Alphabet or number");
+				}
+				else{
+					status=1;
+					console.log(data[i], "Special characters");
+				}
+
+				if(status==0){
+					$('#op').html("Username should contain minimum 1 Special characters!").css('color', 'red');	
+				}
+				else{
+					$('#op').html("Username is Valid!").css('color', 'green');
+				}
+			}
+
+
+		}
+		
+	});
+</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery</title>
+	<style type="text/css">
+		.highlight{
+			color: white;
+			background: orange;
+			border: 0;
+		}
+	</style>
+</head>
+<body>
+<p>
+	Enter Username: <input type="text" id="username">
+</p>
+<p id="op"></p>
+
+<ul id="instruct">
+	 <li>Username should be minimum 8 character </li>
+	 <li>Username should a special character character </li>
+	 <li>Username should contains $ and # only </li>
+</ul>
+
+<script src="jquery.js"></script>
+<script>
+	$('#username').keyup(function(){
+		data = $(this).val(); //fetch value
+		console.log(data.length); //fetch the length
+
+		if(data.length==0){
+			$('#op').html("Enter username!").css('color', 'black');
+		}
+		else if(data.length<8){
+			$('#op').html("Username should be minimum 8 characters!").css('color', 'red');	
+
+		}
+		else{
+			$('#instruct li:eq(0)').css('color', 'green');
+			status=0;
+			for (var i = 0; i <data.length; i++) {
+				asci  = data.charCodeAt(i);
+				//does asci belongs in the range
+				if((asci>=65 && asci<=90) || (asci>=97 && asci<=122) || (asci>=48 && asci<=57)){
+					console.log(data[i], "Alphabet or number");
+				}
+				else{
+					status=1;
+					console.log(data[i], "Special characters");
+				}
+
+				if(status==0){
+					$('#op').html("Username should contain minimum 1 Special characters!").css('color', 'red');	
+				}
+				else{
+					$('#op').html("Username is Valid!").css('color', 'green');
+				}
+			}
+
+
+		}
+		
+	});
+</script>
+</body>
+</html>
+
+=====day 11===============
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>S</title>
+</head>
+<body>
+	<p>Enter Search: <input type="text" id="search"></p>
+
+	<ul id="username">
+		<li>Rahul</li>
+		<li>Rohit</li>
+		<li>Alok</li>
+		<li>Chintu</li>
+		<li>Pintu</li>
+		<li>Sumit</li>
+	</ul>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+
+		
+	$('#search').keyup(function(){
+		data = $(this).val();
+
+		$('#username li').css('color', 'black');
+		$('#username li:contains('+data+')').css('color', 'green');
+
+		if(data.length==0){
+			$('#username li').css('color', 'black');
+		}
+	});
+
+
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>S</title>
+</head>
+<body>
+	<p>Enter Search: <input type="text" id="search"></p>
+
+	<ul id="username">
+		<li>Rahul</li>
+		<li>Rohit</li>
+		<li>Rahul Sharma</li>
+		<li>Rohit Sharma</li>
+		<li>Alok</li>
+		<li>Chintu</li>
+		<li>Pintu</li>
+		<li>Sumit</li>
+	</ul>
+
+
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+
+	$('#search').keyup(function(){
+		data = $(this).val();
+
+		$('#username li').css('color', 'black').hide();
+		$('#username li:contains('+data+')').css('color', 'green').show();
+
+		if(data.length==0){
+			$('#username li').css('color', 'black').show();
+		}
+	});
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image Slider</title>
+	<style type="text/css">
+		.container{
+			height: 300px;
+			width: 100%;
+			background: red;
+		}
+		img{
+			display: none;
+			width: 100%;
+			height: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="img/1.jpg">
+		<img src="img/2.jpg">
+		<img src="img/3.jpg">
+		<img src="img/4.jpg">
+		<img src="img/5.jpg">
+	</div>
+
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+		var x=0;
+		function slider(){
+			if(x>4)x=0;
+			$('.container img').hide();
+			$('.container img:eq('+x+')').show();
+			console.log(x);
+			x++;
+		}
+		// every 2 second it will call slider function
+		setInterval("slider()", 2000);
+
+	</script>
+</body>
+</html>
+
+<button>Add More</button>
+<input type="text" id="fname">
+
+<ul id="username">
+	<li>Rahul</li>
+</ul>
+
+jquery : add new li with name
+								AddMore
+Name: 			Address:      
+Name: 			Address:      
+
+======Day 11=========
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image Slider</title>
+</head>
+<body>
+
+	<p>
+		English: <input type="checkbox" name="lang[]" value="English">
+		Hindi: <input type="checkbox" name="lang[]" value="Hindi">
+		Marathi: <input type="checkbox" name="lang[]" value="Marathi">
+	</p>
+	<p id="op"></p>
+	
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+
+		$( "input:checkbox" ).click(function(){
+			x=0;res="";
+			c1 = $('[value=English]').is(':checked');
+			c2 = $('[value=Hindi]').is(':checked');
+			c3 = $('[value=Marathi]').is(':checked');
+			
+			if(c1==true){x++; res=res+" English"};
+			if(c2==true){x++; res=res+" Hindi"};
+			if(c3==true){x++; res=res+" Marathi"};
+
+			console.log("You have selected "+ x +" checkbox!");
+			$('#op').html(res);
+
+		});
+
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image Slider</title>
+</head>
+<body>
+
+	<p>Select Any two</p>
+	<p>
+		English: <input type="checkbox" name="lang[]" value="English">
+		Hindi: <input type="checkbox" name="lang[]" value="Hindi">
+		Marathi: <input type="checkbox" name="lang[]" value="Marathi">
+	</p>
+	<p id="op"></p>
+	
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+		var count = 0;
+		$( "input:checkbox" ).click(function(){
+			status = $(this).is(':checked');
+			console.log(status);
+
+			if(status=='true'){
+				if(count==2){
+					$(this).prop('checked', false);
+					count--;
+				}
+				if(count<2){
+					count++;	
+				}	
+			}
+			else{
+				console.log("false");
+					count=count-1;
+			}
+			
+			console.log(count);
+		
+		});
+
+	</script>
+</body>
+</html>
+
+==============Day 12================
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JSON - Object</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// object 
+		 a = {};	
+		 console.log(typeof a);
+		 
+		 b = {'harish':30};
+		 console.log(b);
+
+		 c = new Object();   //Object is function
+		
+
+		 c['rahul']="bmw";
+		 c['rahul2']="audi";
+		 c['rahul3']="aston";
+ 		 console.log(c);
+ 		 console.log("Array type access",  c['rahul'])
+ 		 console.log("Object type access", c.rahul);
+
+	</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JSON - Object</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// object 
+		 a = {
+		 	'harish':{
+		 		'age':29,
+		 		'address': 'nagpur',
+		 		'mobile': 34343434
+		 	}
+		 };	
+	
+		console.log(a);
+		console.log(a.harish.age);
+		console.log(a.harish['age'], a.harish['address']);
+		a.harish['company'] = "Azlogics";
+		console.log(a);
+
+		task = {'pending':[], 'completed':[]};  //object contains array
+		console.log(task);
+		task.pending.push('Go to school');
+		task.pending.push('Meeting at office ');
+		console.log(task);
+
+
+	</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JSON - Object</title>
+</head>
+<body>
+	<h2>Todo List</h2>
+	<p>
+		<input type="text" id="task">
+		<button id="addTask" onclick="add_task()">Add Task</button>
+	</p>
+	<ul id="op">
+		
+	</ul>
+
+	<script type="text/javascript">
+		
+		task = document.getElementById('task');
+		op = document.getElementById('op');
+
+		taskList = {'pending':[], 'completed':[]};  //object contains array
+
+		function add_task() {
+			res="";
+
+			if(taskList.pending.length==3){
+				alert("No more Task can be added!");
+				return false; // execution stop
+			}
+
+			taskList.pending.push(task.value);
+			console.log(taskList);
+			for(i=0; i<taskList.pending.length; i++){
+
+				res = res + "<li>"+taskList.pending[i]+"</li>";
+
+			}
+			op.innerHTML = res;
+		}
+		
+	</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JSON - Object</title>
+</head>
+<body>
+	<h2>Todo List</h2>
+	<p>
+		<input type="text" id="task">
+		<button id="addTask" onclick="add_task()">Add Task</button>
+	</p>
+	<ul id="op">
+		
+	</ul>
+
+	<script type="text/javascript">
+		
+		task = document.getElementById('task');
+		op = document.getElementById('op');
+
+		taskList = {'pending':[], 'completed':[]};  //object contains array
+
+		function add_task() {
+			res="";
+
+			if(taskList.pending.length==3){
+				alert("No more Task can be added!");
+				return false; // execution stop
+			}
+
+			taskList.pending.push(task.value);
+			console.log(taskList);
+			for(i=0; i<taskList.pending.length; i++){
+
+				res = res + "<li>"+taskList.pending[i]+"</li>";
+
+			}
+			op.innerHTML = res;
+		}
+		
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

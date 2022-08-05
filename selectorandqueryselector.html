@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Javascript Selector</title>
+  </head>
+  <body>
+    <p>This is paragraph 1</p>
+    <p id="para1">This is paragraph 2</p>
+    <h1 class="bg-grey">Heading</h1>
+    <p>This is paragraph 3</p>
+    <p class="bg-grey">This is paragraph 4</p>
+
+    <script type="text/javascript">
+      // fetch in array format
+      data = document.getElementsByTagName("p");
+      console.log(data);
+      console.log("Length of array", data.length);
+
+      // fetch in array format
+      data = document.getElementsByTagName("h1");
+      console.log(data);
+
+      //fetch single element
+      data = document.getElementById("para1");
+      console.log(data);
+
+      //fetch single element
+      data = document.getElementsByClassName("bg-grey");
+      console.log(data);
+
+      //single element
+      data = document.querySelector("p");
+      console.log("QuerySelector", data);
+
+      data = document.querySelector(".bg-grey"); //. class, # id
+      console.log("QuerySelectorClass", data);
+
+      data = document.querySelector("p.bg-grey"); //select para with class bg-grey
+      console.log("QuerySelectorClass", data);
+
+      data = document.querySelectorAll("p");
+      console.log("Query selector All", data);
+
+      data = document.querySelectorAll(".bg-grey");
+      console.log("Query selector Class", data);
+    </script>
+  </body>
+</html>
