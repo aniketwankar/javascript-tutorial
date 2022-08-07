@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+</head>
+<body>
+    <h3>Select any Four</h3>
+    <input type="checkbox" name="Lang" value="English" id="English">English
+    <input type="checkbox" name="Lang" value="Hindi" id="Hindi">Hindi
+    <input type="checkbox" name="Lang" value="Marathi" id="Marathi">Marathi
+    <input type="checkbox" name="Lang" value="Urdu" id="Urdu">Urdu
+    <input type="checkbox" name="Lang" value="Malayalam" id="Malayalam">Malayalam
+    <input type="checkbox" name="Lang" value="Tamil" id="Tamil">Tamil
+    <p id="op"></p>
+    <script src="jquery.js"></script>
+    <script>
+        count=0;
+        arr=[];
+        $("input").click(function(){
+            data=$(this).val();
+            console.log(data);
+
+            status = $(this).is(':checked',false);
+            console.log(status);
+
+            if(status=='true'){
+                if(count<4){
+                    arr[count]=$(this).val();
+                    console.log(arr);
+                    count++; 
+                    
+                }
+                else{
+                    status = $(this).prop("checked",false);
+                }
+            }
+            else{
+                    index = arr.indexOf(data);
+                    arr.splice(index,1);
+                    console.log(arr);
+                    count--;
+                }
+            console.log(count);
+            $('#op').html(arr+" ");
+
+        });
+
+
+
+    </script>
+
+</body>
+</html>

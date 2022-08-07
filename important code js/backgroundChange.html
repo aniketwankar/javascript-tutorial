@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body class="output">
+
+<h2>Live output</h2>
+Select theme: 
+<select>
+  <option> white</option>
+  <option> black</option>
+  <option> purple</option>
+  <option> yellow</option> 
+  <option> magenta</option>
+</select>
+<p>This is my website</p>
+
+
+  <script type="text/javascript">
+    
+    const select = document.querySelector('select');
+const html = document.querySelector('.output');
+
+select.addEventListener('change', () => {
+  const choice = select.value;
+  switch(choice){
+    case "white":update(choice, "black")
+    break;
+    case "purple":update(choice, "white")
+    break;
+    case "black":update(choice, "white")
+    break;
+    case "yellow":update(choice, "black")
+    break;
+    case "magenta":update(choice, "black")
+    break;
+
+  }
+
+});
+
+function update(bgColor, textColor) {
+  html.style.backgroundColor = bgColor;
+  html.style.color = textColor;
+}
+
+
+  </script>
+
+</body>
+</html>

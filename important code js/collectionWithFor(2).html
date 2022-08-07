@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+// const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+// for (const cat of cats) {
+//   console.log(cat);
+// }
+
+// Similar code
+// const cats = ['Leopard', 'Serval', 'Jaguar', 'Tiger', 'Caracal', 'Lion'];
+
+// for (let i = 0; i < cats.length; i++) {
+//   console.log(cats[i]);
+// }
+
+// const cats = ['Pete', 'Biggles', 'Jasmine'];
+
+// let myFavoriteCats = 'My cats are called ';
+
+// for (const cat of cats) {
+//   myFavoriteCats = `${myFavoriteCats}${cat}, `
+// }
+
+// console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
+
+
+// using for loop
+const cats = ['Pete', 'Biggles', 'Jasmine'];
+
+let myFavoriteCats = 'My cats are called ';
+
+for (let i = 0; i < cats.length; i++) {
+  if (i === cats.length - 1) {   // We are at the end of the array
+    myFavoriteCats = `${myFavoriteCats}and ${cats[i]}.`
+  } else {
+    myFavoriteCats = `${myFavoriteCats}${cats[i]}, `
+  }
+}
+
+console.log(myFavoriteCats);     // "My cats are called Pete, Biggles, and Jasmine."
+
+
+</script>
+</body>
+</html>
